@@ -114,18 +114,7 @@ hr {
         height: 50%;
         position: relative;
     }
-    main .image::before {
-        content: "";
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 5px;
-        background-color: var(--cyan);
-        opacity: 0.5;
-        position: absolute;
-        display: none;
-    }
+    
     main .image .main-img {
         height: 100%;
     }
@@ -139,6 +128,14 @@ hr {
         left: 50%;
         transform: translate(-50%, -50%);
         height: 20%;
+        z-index: 2;
+    }
+    main .image:hover{
+        background-color: hsl(178, 100%, 50%);
+        border-radius: 5px
+    }
+    main .image:hover .main-img {
+        opacity: 0.6;
     }
     /* Error here, when I hover the color doesn't change */
     /* .image > div:hover .image::before {
